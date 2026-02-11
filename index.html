@@ -79,4 +79,119 @@ body{
     padding:22px;
 }
 
-h1
+h1{
+    font-size:18px;
+    color:#ff4d6d;
+    margin-bottom:14px;
+}
+
+p{
+    font-size:14px;
+    line-height:1.7;
+    color:#333;
+    text-align:justify;
+    margin-bottom:14px;
+}
+
+.signature{
+    margin-top:22px;
+    text-align:right;
+    font-weight:600;
+    color:#ff4d6d;
+}
+
+.hint{
+    margin-top:18px;
+    font-size:13px;
+    color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="envelope" id="env">
+        <div class="flap"></div>
+
+        <div class="letter">
+            <div class="letter-content">
+                <h1>Happy 23rd Birthday 🤍</h1>
+
+                <p>
+                Selamat ulang tahun yaa yang ke-23, <b>Aftahul Hajlina 🤍</b>
+                </p>
+
+                <p>
+                Hari ini bukan cuma soal nambah umur, tapi soal semua cerita,
+                capek, seneng, sedih, dan proses panjang yang udah kamu lewatin
+                sejauh ini. Di umur sekarang ini, semoga kamu makin ngerti sama
+                diri kamu sendiri—apa yang kamu mau, apa yang lagi kamu kejar,
+                dan apa yang bikin kamu ngerasa tenang.
+                </p>
+
+                <p>
+                Aku harap ke depannya kamu selalu dikasih keberanian buat
+                melangkah, ketenangan buat nerima hal-hal yang nggak bisa kamu
+                kontrol, dan keyakinan kalau kamu pantas dapet hal-hal baik.
+                Semoga semua capek kamu pelan-pelan kebayar, doa-doa yang sering
+                kamu pendam akhirnya nemu jalannya, dan mimpi-mimpi kamu satu-satu
+                bisa kejadian, tanpa harus maksa waktu.
+                </p>
+
+                <p>
+                Makasih ya udah jadi diri kamu apa adanya. Makasih karena
+                kehadiran kamu tuh rasanya beda—ada hangatnya, ada nyamannya.
+                Kamu itu kuat, walaupun sering milih diem. Kamu juga lembut,
+                walaupun dunia kadang nggak lembut ke kamu. Dan justru itu yang
+                bikin kamu spesial.
+                </p>
+
+                <p>
+                Di umur 23 ini, semoga kamu dikelilingi orang-orang yang beneran
+                tulus sama kamu. Semoga kamu selalu sehat, hatinya adem,
+                pikirannya nggak berat-berat amat. Dan kalau suatu hari hidup
+                kerasa capek banget, inget ya… kamu nggak sendirian. Ada doa,
+                ada harapan, dan ada aku yang selalu doain kamu diam-diam.
+                </p>
+
+                <p>
+                Tetap jadi kamu, dengan caramu sendiri. Nggak usah keburu-buru,
+                nikmatin aja prosesnya. Semoga ke depannya hidup kamu makin
+                banyak senyum, tenang, dan bahagia yang beneran.
+                </p>
+
+                <p>
+                Happy birthday yaa 🤍  
+                Semoga hari ini dan seterusnya selalu baik sama kamu.
+                </p>
+
+                <div class="signature">
+                    Dengan penuh sayang,<br>
+                    Harjuna Jati 🤍
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hint">Klik amplopnya 💌 lalu scroll suratnya</div>
+</div>
+
+<!-- AUDIO -->
+<audio id="music">
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const env = document.getElementById("env");
+const music = document.getElementById("music");
+
+env.addEventListener("click", function(){
+    this.classList.add("open");
+    music.volume = 0.6;
+    music.play();
+});
+</script>
+
+</body>
+</html>
