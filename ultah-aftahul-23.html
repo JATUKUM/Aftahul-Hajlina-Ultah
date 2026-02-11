@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surat Untuk Kamu 🤍</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#ff9a9e,#ff4d6d);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper{
+    text-align:center;
+}
+
+/* ENVELOPE */
+.envelope{
+    position:relative;
+    width:320px;
+    height:200px;
+    background:#ff6f91;
+    border-radius:0 0 18px 18px;
+    box-shadow:0 25px 50px rgba(0,0,0,.35);
+    cursor:pointer;
+}
+
+/* FLAP */
+.flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left:160px solid transparent;
+    border-right:160px solid transparent;
+    border-bottom:120px solid #ff4d6d;
+    transform-origin:top;
+    transition:transform 1s ease;
+    z-index:3;
+}
+
+.envelope.open .flap{
+    transform:rotateX(180deg);
+    z-index: 0;
+}
+
+/* LETTER */
+.letter{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    width:290px;
+    max-height:0;
+    background:#fff;
+    border-radius:12px;
+    overflow-y:auto;
+    transition:max-height 1.2s ease;
+    z-index:5;
+}
+
+/* OPEN LETTER */
+.envelope.open .letter{
+    max-height:420px;
+}
+
+/* CONTENT */
+.letter-content{
+    padding:20px;
+    opacity:0;
+    transition:opacity 1s ease 0.6s;
+}
+
+.envelope.open .letter-content{
+    opacity:1;
+}
+
+h1{
+    font-size:18px;
+    color:#ff4d6d;
+    text-align:center;
+    margin-bottom:14px;
+}
+
+p{
+    font-size:14px;
+    line-height:1.7;
+    color:#333;
+    text-align:justify;
+    margin-bottom:12px;
+}
+
+.signature{
+    margin-top:20px;
+    text-align:right;
+    font-weight:600;
+    color:#ff4d6d;
+}
+
+.hint{
+    margin-top:16px;
+    font-size:13px;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="envelope" id="env">
+        <div class="flap"></div>
+
+        <div class="letter">
+            <div class="letter-content">
+                <h1>Happy 23rd Birthday 🎂</h1>
+
+                <p>
+                Hai… apa kabar?  
+                Semoga hari ini kamu bangun dengan senyum kecil di wajahmu,
+                karena hari ini adalah hari yang spesial.
+                </p>
+
+                <p>
+                Selamat ulang tahun yang ke-23, <b>Aftahul Hajlina 🤍</b>  
+                Hari ini bukan sekadar tentang bertambahnya usia,
+                tapi tentang semua perjalanan hidup yang sudah kamu lalui
+                dengan kuat, sabar, dan penuh keberanian.
+                </p>
+
+                <p>
+                Dua puluh tiga tahun mungkin terdengar seperti angka,
+                tapi di balik itu ada banyak cerita,
+                banyak jatuh dan bangkit,
+                banyak doa yang mungkin tak pernah kamu ceritakan pada siapa pun.
+                </p>
+
+                <p>
+                Aku harap di usia ini,
+                kamu semakin yakin pada dirimu sendiri.
+                Bahwa kamu cukup,
+                bahwa kamu berharga,
+                dan bahwa dunia ini lebih baik karena kamu ada di dalamnya.
+                </p>
+
+                <p>
+                Jangan pernah merasa tertinggal.
+                Setiap orang punya waktunya masing-masing,
+                dan aku percaya,
+                waktumu akan datang dengan cara yang indah.
+                </p>
+
+                <p>
+                Semoga langkahmu selalu dipenuhi ketenangan,
+                hatimu selalu diberi kekuatan,
+                dan hidupmu dikelilingi orang-orang yang tulus menyayangimu.
+                </p>
+
+                <p>
+                Teruslah menjadi kamu,
+                tanpa perlu berubah demi siapa pun.
+                Karena versi dirimu yang sekarang,
+                sudah sangat layak untuk dicintai.
+                </p>
+
+                <p>
+                Selamat ulang tahun 🤍  
+                Semoga semua doa baik menemukan jalannya menuju kamu.
+                </p>
+
+                <div class="signature">
+                    — Harjuna Jati
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hint">Klik amplopnya lalu scroll suratnya 💌</div>
+</div>
+
+<script>
+document.getElementById("env").addEventListener("click", function(){
+    this.classList.add("open");
+});
+</script>
+
+</body>
+</html>
